@@ -6,7 +6,7 @@ trait MyScalaModule extends ScalaModule { outer =>
   trait MyTests extends Tests {
     override def moduleDeps = outer :: outer.moduleDeps.toList
     override def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.0.4")
-    override def testFramework = "org.scalatest.tools.Framework"
+    override def testFrameworks = Seq("org.scalatest.tools.Framework")
   }
 }
 
